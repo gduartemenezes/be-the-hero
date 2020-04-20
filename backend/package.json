@@ -1,0 +1,24 @@
+{
+  "name": "be-the-hero-serverside",
+  "version": "1.0.0",
+  "description": "Server Side of the Be the Hero application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gduartemenezes/be-the-hero.git"
+  },
+  "keywords": [
+    "bethehero",
+    "node",
+    "react"
+  ],
+  "author": "Gustavo Duarte",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gduartemenezes/be-the-hero/issues"
+  },
+  "homepage": "https://github.com/gduartemenezes/be-the-hero#readme"
+}
