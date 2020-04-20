@@ -20,5 +20,13 @@
   "bugs": {
     "url": "https://github.com/gduartemenezes/be-the-hero/issues"
   },
-  "homepage": "https://github.com/gduartemenezes/be-the-hero#readme"
+  "homepage": "https://github.com/gduartemenezes/be-the-hero#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "knex": "^0.21.0",
+    "sqlite3": "^4.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  }
 }
