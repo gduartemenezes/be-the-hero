@@ -80,6 +80,8 @@ typings/
 # nuxt.js build output
 .nuxt
 
+# Database
+database/db.sqlite
 # rollup.js default build output
 dist/
 
