@@ -18,3 +18,19 @@ exports.createNGO = async (req, res) => {
     });
   }
 };
+
+exports.getAllNGOs = async (req, res) => {
+  try {
+    const allNGOs = await connection("ngos").select("*");
+
+    res.status(200).json({
+      status: "success",
+      allNGOs,
+    });
+  } catch (error) {
+    res.status(400).json({
+      status: "fail",
+      message: error,
+    });
+  }
+};
