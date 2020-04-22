@@ -18,3 +18,19 @@ exports.createIncident = async (req, res) => {
     });
   }
 };
+
+exports.getAllIncidents = async (req, res) => {
+  try {
+    const allIncidents = await connection("incidents").select("*");
+
+    res.status(200).json({
+      status: "success",
+      allIncidents,
+    });
+  } catch (error) {
+    res.status(400).json({
+      status: "fail",
+      message: error,
+    });
+  }
+};
