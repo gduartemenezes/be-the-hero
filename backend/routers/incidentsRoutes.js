@@ -9,4 +9,6 @@ router
   .post(incidentController.createIncident)
   .get(incidentController.getAllIncidents);
 
+router.route("/:id").delete(incidentController.deleteIncident);
+
 module.exports = router;
