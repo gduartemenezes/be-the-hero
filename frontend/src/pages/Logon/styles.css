@@ -1,0 +1,33 @@
+.container-logon {
+  width: 100%;
+  max-width: 1040px;
+  height: 100vh;
+  margin: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container-logon img.logo {
+  width: 200px;
+  height: auto;
+}
+.container-logon section.form {
+  width: 100%;
+  max-width: 400px;
+}
+.container-logon section.form form {
+  margin-top: 100px;
+}
+
+section h1 {
+  font-size: 180%;
+  font-weight: 300;
+  margin-bottom: 50px;
+}
+
+img.heroes {
+  width: 450px;
+  height: auto;
+}
