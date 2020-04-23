@@ -1,7 +1,8 @@
 import React from "react";
-
+import Routes from "./routes";
+import "./pages/global.css";
 function App() {
-  return <h1>Hello</h1>;
+  return <Routes />;
 }
 
 export default App;
