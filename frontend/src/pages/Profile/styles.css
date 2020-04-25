@@ -1,0 +1,93 @@
+.profile-container {
+  width: 100%;
+  max-width: 1040px;
+  display: inline-block;
+  margin: 32px auto;
+}
+
+header {
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  margin-left: 150px;
+}
+
+.profile-container header img {
+  width: 100px;
+  height: auto;
+}
+
+.profile-container header span {
+  margin-left: 30px;
+}
+
+.btn-add {
+  width: 200px;
+  margin-left: 285px;
+}
+
+.btn-power {
+  margin-left: 10px;
+  color: #e02041;
+  height: 60px;
+  width: 60px;
+  border-radius: 25%;
+  border: 1px solid #dcdce6;
+  background: transparent;
+  margin-left: 50px;
+  margin-top: 15px;
+  transition: border 0.1s;
+  align-content: center;
+}
+
+.btn-power:hover {
+  border: 2px solid #e02041;
+}
+
+section.bottom {
+  margin-left: 150px;
+}
+section.bottom h1 {
+  margin-left: auto;
+  font-size: 150%;
+}
+
+section.bottom ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 24px;
+  list-style: none;
+}
+
+section.bottom ul li {
+  width: 100%;
+  max-width: 480px;
+  background: #fff;
+  padding: 7px 7px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+section.bottom ul li strong {
+  font-weight: 700;
+  font-size: 80%;
+  padding: 0 10px;
+}
+
+section.bottom ul li p {
+  font-weight: 300;
+  font-size: 90%;
+  padding: 5px 15px;
+  line-height: 24px;
+}
+
+section.bottom ul li button {
+  background: #fff;
+  float: right;
+  border: 0;
+  transition: opacity 0.2s;
+}
+
+section.bottom ul li button:hover {
+  opacity: 0.5;
+}
