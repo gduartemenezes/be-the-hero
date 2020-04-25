@@ -1,9 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,300&display=swap");
 
 * {
-  background: #f3eded;
   color: #555;
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font: 400 18px "Poppins", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background: #f3eded;
   margin: 0;
   padding: 0;
   font: 400 18px "Poppins", sans-serif;
@@ -25,12 +32,13 @@ form input {
 
 .btn {
   width: 100%;
+  max-width: 350px;
   height: 60px;
   background-color: #e60241;
   border: 0;
   border-radius: 8px;
   color: #fff;
-  font-weight: 700;
+  font-weight: 400;
   margin-top: 16px;
   display: inline-block;
   text-align: center;
@@ -50,11 +58,12 @@ form input {
   font-size: 80%;
   font-weight: 400;
   text-decoration: none;
-  justify-content: center;
+  justify-content: left;
   transition: oppacity 0.2s;
 }
 .link svg {
   margin-right: 10px;
+  color: #e60241;
 }
 
 .link:hover {

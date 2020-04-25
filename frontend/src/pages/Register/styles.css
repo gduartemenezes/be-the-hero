@@ -11,14 +11,15 @@
 
 section {
   width: 100%;
-  margin: auto 60px;
+  margin: 0 60px;
 }
 
 section.form input {
   font-size: 80%;
-  margin-bottom: 8px;
+  margin-bottom: 15px;
 }
 
-section.static {
-  justify-content: space-around;
+h1 {
+  font-size: 80%;
+  margin: 60px auto;
 }
