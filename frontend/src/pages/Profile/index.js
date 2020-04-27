@@ -27,6 +27,25 @@ export default function Profile() {
       });
   }, [ngoId]);
 
+  function handleLogout() {
+    localStorage.clear();
+    history.push("/");
+  }
+
+  async function handleDeleteIncident(id) {
+    try {
+      await api.delete(`incidents/${id}`, {
+        headers: {
+          Authorization: ngoId,
+        },
+      });
+
+      setIncidents(incidents.filter((el) => el.id !== id));
+    } catch (error) {
+      console.log("Something went wrong");
+      console.log(error);
+    }
+  }
   return (
     <div className="profile-container">
       <header>
@@ -35,8 +54,8 @@ export default function Profile() {
         <Link className="btn btn-add" to="/incidents/new">
           Add case
         </Link>
-        <button className="btn-power">
-          <FiPower color="red" />
+        <button className="btn-power" onClick={handleLogout}>
+          <FiPower />
         </button>
       </header>
 
@@ -45,7 +64,10 @@ export default function Profile() {
         <ul>
           {incidents.map((el) => (
             <li key={el.id}>
-              <button className="btn-delete">
+              <button
+                className="btn-delete"
+                onClick={() => handleDeleteIncident(el.id)}
+              >
                 <FiTrash2 />
               </button>
               <strong>Case:</strong>
@@ -53,7 +75,12 @@ export default function Profile() {
               <strong>Description:</strong>
               <p>{el.description}</p>
               <strong>Value:</strong>
-              <p>{el.value}</p>
+              <p>
+                {Intl.NumberFormat("pt-BR", {
+                  style: "currency",
+                  currency: "BRL",
+                }).format(el.value)}
+              </p>
             </li>
           ))}
         </ul>

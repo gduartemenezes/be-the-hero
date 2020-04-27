@@ -6,24 +6,23 @@
 }
 
 header {
-  width: 100%;
+  display: flex;
   align-items: center;
   justify-content: center;
   margin-left: 150px;
 }
 
 .profile-container header img {
-  width: 100px;
-  height: auto;
+  height: 64px;
 }
 
 .profile-container header span {
-  margin-left: 30px;
+  margin-left: 24px;
 }
 
 .btn-add {
   width: 200px;
-  margin-left: 285px;
+  margin-left: auto;
 }
 
 .btn-power {
@@ -34,7 +33,7 @@ header {
   border-radius: 25%;
   border: 1px solid #dcdce6;
   background: transparent;
-  margin-left: 50px;
+  margin-left: 15px;
   margin-top: 15px;
   transition: border 0.1s;
   align-content: center;
