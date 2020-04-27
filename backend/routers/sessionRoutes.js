@@ -3,6 +3,6 @@ const sessionController = require("../controllers/sessionController");
 
 const router = express.Router();
 
-router.route("/").get(sessionController.startSession);
+router.route("/").post(sessionController.startSession);
 
 module.exports = router;
