@@ -58,8 +58,8 @@ export default function CreateIncident() {
             value={title}
             onChange={(event) => setTitle(event.target.value)}
           />
-          <input
-            type="text"
+          <textarea
+            type="textarea"
             placeholder="Description"
             value={description}
             onChange={(event) => setDescription(event.target.value)}
