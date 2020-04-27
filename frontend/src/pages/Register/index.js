@@ -1,10 +1,40 @@
-import React from "react";
-import {} from "react-icons/fi";
+import React, { useState } from "react";
+import { Link, useHistory } from "react-router-dom";
 
+import api from "../../services/api";
+
+import { FiArrowLeft } from "react-icons/fi";
 import "./styles.css";
 import logo from "../../assets/logo.png";
 
 export default function Register() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [whatsapp, setWhatsapp] = useState("");
+  const [city, setCity] = useState("");
+
+  const history = useHistory();
+
+  async function handleRegister(event) {
+    event.preventDefault();
+    const data = {
+      name,
+      email,
+      whatsapp,
+      city,
+    };
+
+    try {
+      const res = await api.post("ngos", data);
+
+      alert(`Your access ID is: ${res.data.id}`);
+
+      history.push("/");
+    } catch (error) {
+      console.log("Something went wrong");
+      console.log(error);
+    }
+  }
   return (
     <div className="register-container">
       <section className="static">
@@ -16,13 +46,36 @@ export default function Register() {
           Joining the platform you get closer to volunteers, also known as
           Heroes.
         </p>
+        <Link className="link" to="/">
+          <FiArrowLeft /> Back to HomePage
+        </Link>
       </section>
       <section className="form">
-        <form>
-          <input type="text" placeholder="NGO name" />
-          <input type="email" placeholder="Email" />
-          <input type="text" placeholder="Whatsapp" />
-          <input type="text" placeholder="City" />
+        <form onSubmit={handleRegister}>
+          <input
+            type="text"
+            placeholder="NGO name"
+            value={name}
+            onChange={(event) => setName(event.target.value)}
+          />
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(event) => setEmail(event.target.value)}
+          />
+          <input
+            type="text"
+            placeholder="Whatsapp"
+            value={whatsapp}
+            onChange={(event) => setWhatsapp(event.target.value)}
+          />
+          <input
+            type="text"
+            placeholder="City"
+            value={city}
+            onChange={(event) => setCity(event.target.value)}
+          />
           <button className="btn btn-register" type="submit">
             Register.
           </button>
