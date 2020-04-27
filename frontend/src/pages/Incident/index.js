@@ -31,6 +31,8 @@ export default function CreateIncident() {
           Authorization: ngoId,
         },
       });
+
+      history.push("/profile");
     } catch (error) {
       console.log("Something went wrong");
       console.log(error);
@@ -60,7 +62,7 @@ export default function CreateIncident() {
             type="text"
             placeholder="Description"
             value={description}
-            onChange={(event) => event.target.value}
+            onChange={(event) => setDescription(event.target.value)}
           />
           <input
             type="text"
